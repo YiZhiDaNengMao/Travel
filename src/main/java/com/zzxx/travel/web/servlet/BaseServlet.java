@@ -24,10 +24,10 @@ public class BaseServlet extends HttpServlet {
         HttpServletResponse response = (HttpServletResponse) res;
         //1.获取请求路径
         String uri = request.getRequestURI();
-        System.out.println("请求uri:"+uri);
+//        System.out.println("请求uri:"+uri);
         //2.获取方法名称
         String methodName = uri.substring(uri.lastIndexOf("/") + 1);
-        System.out.println("方法名称："+methodName);
+//        System.out.println("方法名称："+methodName);
         //3.获取方法对象Method谁调用我？我代表谁
         Class cls = this.getClass();
         try {
@@ -47,8 +47,8 @@ public class BaseServlet extends HttpServlet {
 
     /*传入的对象序列化为json，并且写回前端*/
     public void writeValue(HttpServletResponse response,Object obj) throws IOException {
-        ObjectMapper mapper = new ObjectMapper();
         response.setContentType("application/json;charset=utf-8");
+        ObjectMapper mapper = new ObjectMapper();
         mapper.writeValue(response.getOutputStream(),obj);
     }
 

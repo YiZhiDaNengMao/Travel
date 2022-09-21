@@ -181,13 +181,14 @@
                 "user/register",
                 $(this).serialize(),
                 function (data) {
+                    console.log(data.flag)
                     if (data.flag) {
                         location.href = "register_ok.html";
                     } else {
                         alert(data.errorMsg);
                     }
-                }
-                // "json"
+                },
+                "json"
             )
         }
         return false;

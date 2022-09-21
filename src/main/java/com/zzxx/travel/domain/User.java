@@ -129,4 +129,10 @@ public class User implements Serializable {
         this.code = code;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

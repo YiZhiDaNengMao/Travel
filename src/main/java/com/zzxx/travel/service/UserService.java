@@ -2,7 +2,7 @@ package com.zzxx.travel.service;
 
 import com.zzxx.travel.domain.User;
 
-public interface TravelService {
+public interface UserService {
     boolean isRegister(User user);
 
     boolean active(String code);
